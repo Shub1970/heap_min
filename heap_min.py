@@ -22,4 +22,19 @@ def buld_min_heap(array):
 array=[5,2,3,8,4,9]
 print(buld_min_heap(array))
 
+#for extrating the min value in heap algo.
 
+def min_heap_extract(array):
+    heap_leang=len(array)
+    if heap_leang<=1:
+        print("error that the size of array smaller than 1")
+    while heap_leang>1:
+        if heap_leang>1:
+            maxi=array[0]
+            swap(array,0,-1)
+            heap_leang=heap_leang-1
+            array=array[:heap_leang]
+            heap_min(array,0)
+            return maxi                                         #for printing all min in coloum just put "print" insist of "return"
+#for calling the the min_heap_extract function 
+print(min_heap_extract(array))
