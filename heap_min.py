@@ -24,7 +24,7 @@ print(buld_min_heap(array))
 
 #for extrating the min value in heap algo.
 
-def min_heap_extract(array):
+def min_heap_extract(array):                                          #heappop in python 
     heap_leang=len(array)
     if heap_leang<=1:
         print("error that the size of array smaller than 1")
@@ -33,7 +33,7 @@ def min_heap_extract(array):
             maxi=array[0]
             swap(array,0,-1)
             heap_leang=heap_leang-1
-            array=array[:heap_leang]
+            array=array[:heap_leang]                                   #for partical use we use delarray[-1] insist of "array=array[:heap_leang]"
             heap_min(array,0)
             return maxi                                         #for printing all min in coloum just put "print" insist of "return"
 #for calling the the min_heap_extract function 
